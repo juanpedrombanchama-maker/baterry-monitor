@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 
 app = Flask(__name__)
 estado_bateria = {"voltaje": 0.0, "porcentaje": 0.0}
@@ -13,6 +13,10 @@ def update():
 @app.route('/nivel')
 def nivel():
     return jsonify(estado_bateria)
+
+@app.route('/')
+def index():
+    return send_from_directory('.', 'index.html')
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
