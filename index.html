@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Monitor de Batería</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .bateria-container {
+      width: 200px;
+      height: 100px;
+      border: 4px solid #333;
+      border-radius: 8px;
+      margin: 20px auto;
+      position: relative;
+      background-color: #ddd;
+      overflow: hidden;
+    }
+
+    .bateria-nivel {
+      height: 100%;
+      width: 0%;
+      transition: width 0.5s ease;
+    }
+
+    .bateria-tapita {
+      width: 20px;
+      height: 40px;
+      background-color: #333;
+      position: absolute;
+      top: 30px;
+      right: -24px;
+      border-radius: 4px;
+    }
+
+    .texto {
+      font-size: 24px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Estado de la Batería</h1>
+  <div class="bateria-container">
+    <div class="bateria-nivel" id="nivel"></div>
+    <div class="bateria-tapita"></div>
+  </div>
+  <div class="texto" id="texto"></div>
+
+  <script>
+    function actualizar() {
+      fetch('/nivel')
+        .then(res => res.json())
+        .then(data => {
+          const porcentaje = parseFloat(data.porcentaje.toFixed(1));
+          const voltaje = data.voltaje.toFixed(2);
+          const nivel = document.getElementById('nivel');
+
+          nivel.style.width = porcentaje + '%';
+
+          // Color dinámico según nivel
+          if (porcentaje > 75) {
+            nivel.style.backgroundColor = '#4caf50'; // verde
+          } else if (porcentaje > 40) {
+            nivel.style.backgroundColor = '#ffeb3b'; // amarillo
+          } else {
+            nivel.style.backgroundColor = '#f44336'; // rojo
+          }
+
+          document.getElementById('texto').innerText = `${porcentaje}% (${voltaje} V)`;
+        });
+    }
+
+    setInterval(actualizar, 1000);
+  </script>
+</body>
+</html>
