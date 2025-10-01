@@ -1,4 +1,6 @@
 from flask import Flask, request, jsonify, send_from_directory
+import webbrowser
+import threading
 
 app = Flask(__name__)
 estado_bateria = {"voltaje": 0.0, "porcentaje": 0.0}
@@ -18,5 +20,9 @@ def nivel():
 def index():
     return send_from_directory('.', 'index.html')
 
+def abrir_navegador():
+    webbrowser.open_new("http://localhost:5000/")
+
 if __name__ == '__main__':
+    threading.Timer(1.25, abrir_navegador).start()
     app.run(host='0.0.0.0', port=5000)
