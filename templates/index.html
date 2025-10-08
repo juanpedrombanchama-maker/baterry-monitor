@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Monitor de Baterías</title>
-  <link rel="icon" href="{{ url_for('static', filename='favicon_none.png') }}" type="image/x-icon">
+  <link rel="icon" href="{{ url_for('static', filename='Favicon_none.png') }}" type="image/x-icon">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -50,18 +50,18 @@
 
   <script>
     function actualizarFavicon(estado) {
-      let favicon = 'favicon_full.png';
+      let favicon = 'Favicon_full.png';
       if (estado === 'none') {
-        favicon = 'favicon_none.png';
+        favicon = 'Favicon_none.png';
       } else if (estado < 20) {
-        favicon = 'favicon_low.png';
+        favicon = 'Favicon_low.png';
       } else if (estado < 60) {
-        favicon = 'favicon_medium.png';
+        favicon = 'Favicon_medium.png';
       }
 
       const link = document.querySelector("link[rel~='icon']");
       if (link) {
-        link.href = `/static/${favicon}`;
+        link.href = `/static/${favicon}?v=${Date.now()}`;
       }
     }
 
@@ -75,7 +75,7 @@
           const ids = Object.keys(data);
           if (ids.length === 0) {
             contenedor.innerHTML = '<p style="font-size: 20px; color: #666;">⚠️ No hay baterías conectadas</p>';
-            actualizarFavicon(100);
+            actualizarFavicon("none");
             return;
           }
 
