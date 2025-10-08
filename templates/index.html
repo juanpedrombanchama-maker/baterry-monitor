@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <title>Monitor de Batería</title>
+  <meta charset="UTF-8">
+  <title>Monitor de Baterías</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -39,57 +40,56 @@
     }
 
     .texto {
-      font-size: 24px;
-      margin-top: 20px;
+      font-size: 20px;
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
-  <h1>Estado de la Batería</h1>
-  <div class="bateria-container">
-    <div class="bateria-nivel" id="nivel"></div>
-    <div class="bateria-tapita"></div>
-  </div>
-  <div class="texto" id="texto"></div>
+  <h1>🔋 Estado de las Baterías</h1>
+  <div id="contenedor-baterias"></div>
 
   <script>
     function actualizar() {
       fetch('/nivel')
         .then(res => res.json())
         .then(data => {
-          const porcentaje = parseFloat(data.porcentaje.toFixed(1));
-          const voltaje = data.voltaje.toFixed(2);
-          const nivel = document.getElementById('nivel');
+          const contenedor = document.getElementById('contenedor-baterias');
+          contenedor.innerHTML = '';
 
-          nivel.style.width = porcentaje + '%';
-
-          // Color dinámico según nivel
-          if (porcentaje > 75) {
-            nivel.style.backgroundColor = '#4caf50'; // verde
-          } else if (porcentaje > 40) {
-            nivel.style.backgroundColor = '#ffeb3b'; // amarillo
-          } else {
-            nivel.style.backgroundColor = '#f44336'; // rojo
-          }
-          if (porcentaje < 20) {
-            document.getElementById('texto').style.color = '#f44336';
-          } else {
-            document.getElementById('texto').style.color = '#333';
+          const ids = Object.keys(data);
+          if (ids.length === 0) {
+            contenedor.innerHTML = '<p style="font-size: 20px; color: #666;">⚠️ No hay baterías conectadas</p>';
+            return;
           }
 
-          if (voltaje < 3.3 || voltaje > 4.2) {
-            document.body.style.backgroundColor = '#ffe6e6'; // rojo claro
-          } else {
-            document.body.style.backgroundColor = '#f0f0f0'; // fondo normal
+          for (const [id, datos] of Object.entries(data)) {
+            const porcentaje = parseFloat(datos.porcentaje.toFixed(1));
+            const voltaje = datos.voltaje.toFixed(2);
+
+            const color = porcentaje > 75 ? '#4caf50' :
+                          porcentaje > 40 ? '#ffeb3b' : '#f44336';
+
+            const fondo = voltaje < 3.3 || voltaje > 4.2 ? '#ffe6e6' : '#f0f0f0';
+
+            const alerta = porcentaje < 20 ? '<p style="color:#f44336;">⚠️ Batería baja</p>' : '';
+
+            const bateriaHTML = `
+              <div class="bateria-container" style="background-color: ${fondo};">
+                <div class="bateria-nivel" style="width: ${porcentaje}%; background-color: ${color}; transition: width 0.5s ease;"></div>
+                <div class="bateria-tapita"></div>
+              </div>
+              <div class="texto" style="color: ${porcentaje < 20 ? '#f44336' : '#333'};">
+                <strong>${id}</strong>: ${porcentaje}% (${voltaje} V)
+                ${alerta}
+              </div>
+            `;
+
+            contenedor.innerHTML += bateriaHTML;
           }
-
-
-          document.getElementById('texto').innerText = `${porcentaje}% (${voltaje} V)`;
         })
         .catch(err => {
-          document.getElementById('texto').innerText = 'Error al obtener datos';
-          document.getElementById('nivel').style.backgroundColor = '#999';
-          document.getElementById('nivel').style.width = '0%';
+          document.getElementById('contenedor-baterias').innerHTML = '<p>Error al obtener datos</p>';
         });
     }
 
