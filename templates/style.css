@@ -53,7 +53,7 @@ nav ul li a:hover, nav ul li a.active{
     background-color: rgba(255, 255, 255, 0.2);
 }
 footer {
-    margin-top: 50%;
+    margin-top: 20%;
     background-color: #333;
     color: white;
     padding: 2rem 0;
@@ -80,15 +80,123 @@ footer {
 .redes a:hover{
     background-color: #1d1b2f;
 }
+.mejora {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.form {
+    margin-bottom: 1.5rem;
+}
+.form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+.form-contac {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+.container-info {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+textarea.form-contac{
+    min-height: 150px;
+    resize: vertical;
+}
+.container-conta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+.bot {
+    display: inline-block;
+    background-color: #00ff22;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+.bot:hover{
+    background-color: #3de600;
+}.barra ul{
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+}
+.barra ul li {
+    margin-left: 40px;
+}
+.container2{
+    margin-top: 5%;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.container2 h2{
+    color: #d06060;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #d06060;
+    text-align: center;
+}
+.container2 p{
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    margin-left: 10px;
+}
+.container h2{
+    color: #d06060;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #d06060;
+    text-align: center;
+}
+.redes-2 {
+    display: flex;
+    margin: 1rem 0;
+}
+.redes-2 img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.redes-2 a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+.redes-2 img:hover{
+    image-resolution: inherit;
+}
 .bateria-container {
-    position: relative;
+    justify-self: center;
+    margin-top: 10%;
+    display: grid;
     width: 100px;
     height: 200px;
     border: 5px solid #333;
     border-radius: 8px;
-    margin: 20px auto;
     background-color: #f0f0f0;
-    overflow: hidden;
 }
 .bateria-nivel {
     position: absolute;
@@ -109,4 +217,16 @@ footer {
 .texto {
     font-size: 16px;
     margin-top: 10px;
-    }
+}
+.logo {
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+    justify-self: center;
+}
+.logo img {
+    max-width: 100%;
+    object-fit: cover;
+    display: flex;
+}

@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página</title>
+    <title>Monitor de Baterías</title>
+    <link rel="icon" href="{{ url_for('static', filename='favicon_none.png') }}" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="contaner">
             <div class="logo.conxia">
+                <div class="logo">
+                    <img src="static/conexxia-logo.png" alt="Ejemplo">
+                </div>
                 <div class="text">
                     <h1>Monitor de Baterrias Conexia</h1>
                 </div>
@@ -39,7 +44,7 @@
                     </div>
                 <h3>Síguenos</h3>
                 <div class="redes-2">
-                    <a href="#" aria-label="Facebook">F</a>
+                    <a href="#" aria-label="Facebook"><img src="static/Facebook-logo-.png" alt="Ejemplo">
                     <a href="#" aria-label="Instagram">I</a>
                 </div>
                         
@@ -72,157 +77,5 @@
             </div>
         </div>
     </main>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        body {
-            background-color: #f6f3f3;
-            color: #333;
-            line-height: 1.6;
-        }
-        .mejora {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        }
-        .form {
-            margin-bottom: 1.5rem;
-        }
-        .form label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
-        .form-contac {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 1rem;
-        }
-        .container-info {
-            background-color: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        }
-        textarea.form-contac{
-            min-height: 150px;
-            resize: vertical;
-        }
-        .container-conta {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        .bot {
-            display: inline-block;
-            background-color: #00ff22;
-            color: white;
-            padding: 10px 25px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background-color 0.3s;
-            border: none;
-            cursor: pointer;
-        }
-        .bot:hover{
-            background-color: #3de600;
-        }
-        .barra ul{
-            display: flex;
-            list-style: none;
-            flex-wrap: wrap;
-        }
-        .barra ul li {
-            margin-left: 40px;
-        }
-        .container2{
-            margin-top: 5%;
-            background-color: white;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        }
-        .container h2{
-            color: #d06060;
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid #d06060;
-            text-align: center;
-        }
-        .container2 p{
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.5rem;
-            margin-left: 10px;
-        }
-        .container{
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        header {
-            background: linear-gradient(135deg, #bd0707, #c89090);
-            color: white;
-            padding: 1rem 0;
-            box-shadow: 0 2px, 5px rgba(0,0,0,0.1);
-        }
-        .logo.conexia {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-        .text h1 {
-            font-size: 1.8rem;
-            margin-bottom: 5px;
-            text-align: center;
-        }
-        nav ul {
-            display: flex;
-            list-style: none;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        nav ul li {
-            margin-right: 20px;
-        }
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            padding: 5px 10px;
-            border-radius: 4px;
-            transition: background-color 0.3s;
-        }
-        nav ul li a:hover, nav ul li a.active{
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-        .redes-2 {
-            display: flex;
-            margin: 1rem 0;
-        }
-        .redes-2 a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: red;
-            border-radius: 50%;
-            margin: 0 10px;
-            color: white;
-            text-decoration: none;
-            transition: background-color 0.3s;
-        }
-        .redes-2 a:hover{
-            background-color: #421010;
-        }
-    </style>
 </body>
 </html>
