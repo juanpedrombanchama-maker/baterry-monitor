@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página</title>
+</head>
+<body>
+    <header>
+        <div class="contaner">
+            <div class="logo.conxia">
+                <div class="text">
+                    <h1>Monitor de Baterrias Conexia</h1>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="Ayuda.html" class="nav-link">Ayuda</a></li>
+                    <li><a href="index.html" class="nav-link">Inicio</a></li>
+                    <li><a href="Sugerencias.html" class="nav-link">Sugerencias de Mejora</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container2">
+            <h2>Información del sitio web</h2>
+            <div class="información">
+                <p>Esto es un Monitor de Baterrias en tiempo rea, que moestra lecturas de consumo,
+                    mostrando valores como el voltage y el porcetage de las baterrias, la página
+                    racciona de pendiendo del nivel de carga, junto al icono de la página, en la
+                    barra acomtinuación se explica las diferente reaciones con su significado:
+                </p>
+            <div class="barra">
+                <ul>
+                    <li>1. Página en estado normal e icono verde: Significa que el promedio de carga de las baterrias es más del 60% </li>
+                    <li>2. Página con un color narangizo e icono naranja: Significa que el promedio de carga de las baterriases menos del 60%</li>
+                    <li>3. Página con un color rogizo e icono nivel rojo: Significa que el promedio de carga de las baterrias es menos del 20%</li>
+                    <li>4. Página en blanco e icono de alerta: Significa que no se encuentra conectada ninguna baterria</li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </main>
+     <footer>
+        <div class="container">
+            <p>&copy; 2025 Conexia. Todos los derechos reservados</p>
+            <div class="redes">
+                <a href="#" aria-label="Facebook">F</a>
+                <a href="#" aria-label="Instagram">I</a>
+                <a href="#" aria-label="Youtube">Y</a>
+            </div>
+        </div>
+    </footer>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f6f3f3;
+            color: #333;
+            line-height: 1.6;
+        }
+        .barra ul{
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        .barra ul li {
+            margin-left: 40px;
+        }
+        .container2{
+            margin-top: 5%;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        .container2 h2{
+            color: #d06060;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #d06060;
+            text-align: center;
+        }
+        .container2 p{
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            margin-left: 10px;
+        }
+        .container{
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            background: linear-gradient(135deg, #bd0707, #c89090);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px, 5px rgba(0,0,0,0.1);
+        }
+        .logo.conexia {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        .text h1 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+        nav ul {
+            display: flex;
+            list-style: none;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        nav ul li a:hover, nav ul li a.active{
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        footer {
+            margin-top: 10%;
+            background-color: #333;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        .redes ´{
+            display: flex;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+        .redes a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .redes a:hover{
+            background-color: #1d1b2f;
+        }
+    </style>
+</body>
+</html>
