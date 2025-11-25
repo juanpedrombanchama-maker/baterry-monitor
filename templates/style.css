@@ -53,16 +53,26 @@ nav ul li a:hover, nav ul li a.active{
     background-color: rgba(255, 255, 255, 0.2);
 }
 footer {
-    margin-top: 20%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 185px;
     background-color: #333;
     color: white;
-    padding: 2rem 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     text-align: center;
 }
 .redes {
     display: flex;
-    justify-content: center;
+    justify-content: right;
     margin: 1rem 0;
+}
+.redes img{
+    max-width: 100%;
+    display: inline-flex;
+    object-fit: cover;
+    display: flex;
 }
 .redes a {
     display: inline-flex;
@@ -70,15 +80,12 @@ footer {
     justify-content: center;
     width: 40px;
     height: 40px;
-    background-color: rgba(255,255,255,0.1);
     border-radius: 50%;
     margin: 0 10px;
-    color: white;
-    text-decoration: none;
     transition: background-color 0.3s;
 }
-.redes a:hover{
-    background-color: #1d1b2f;
+.redes :hover{
+    box-shadow: 0 3px 10px rgba(206, 203, 203, 0.692);
 }
 .mejora {
     background-color: white;
@@ -116,6 +123,14 @@ textarea.form-contac{
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
+
+.container-3{
+    width: 4;
+    max-width: 1200;
+    display: flex;
+    color: #00ff22;
+    margin-top: 40px;
+}
 .bot {
     display: inline-block;
     background-color: #00ff22;
@@ -139,7 +154,7 @@ textarea.form-contac{
     margin-left: 40px;
 }
 .container2{
-    margin-top: 5%;
+    margin-top: 30px;
     background-color: white;
     padding: 2rem;
     border-radius: 8px;
@@ -182,11 +197,10 @@ textarea.form-contac{
     background-color: rgb(255, 255, 255);
     border-radius: 50%;
     margin: 0 10px;
-    text-decoration: none;
     transition: background-color 0.3s;
 }
 .redes-2 img:hover{
-    image-resolution: inherit;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.386);
 }
 .bateria-container {
     justify-self: center;
@@ -227,6 +241,7 @@ textarea.form-contac{
 }
 .logo img {
     max-width: 100%;
+    display: inline-flex;
     object-fit: cover;
     display: flex;
 }
