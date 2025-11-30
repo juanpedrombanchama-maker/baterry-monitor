@@ -32,25 +32,16 @@ header {
     margin-bottom: 5px;
     text-align: center;
 }
-nav ul {
-    display: flex;
-    list-style: none;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-nav ul li {
-    margin-right: 20px;
-}
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: 500;
-    padding: 5px 10px;
-    border-radius: 4px;
-    transition: background-color 0.3s;
-}
-nav ul li a:hover, nav ul li a.active{
-    background-color: rgba(255, 255, 255, 0.2);
+
+.boton {
+    background-color: rgb(236, 0, 0);
+    color: rgb(255, 255, 255);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 12px;
+    cursor: pointer;
+    
 }
 footer {
     display: grid;
@@ -144,7 +135,7 @@ textarea.form-contac{
     cursor: pointer;
 }
 .bot:hover{
-    background-color: #3de600;
+    background-color: #1d6a01;
 }.barra ul{
     display: flex;
     list-style: none;

@@ -68,3 +68,19 @@ function actualizar() {
     }
 
 setInterval(actualizar, 1000);
+function toggleMenu() {
+    document.getElementById("miboton").classList.toggle("show");
+  }
+
+  // Cerrar el menú si se hace clic fuera
+  window.onclick = function(event) {
+    if (!event.target.matches('.boton')) {
+      let dropdowns = document.getElementsByClassName("contenido");
+      for (let i = 0; i < dropdowns.length; i++) {
+        let openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
