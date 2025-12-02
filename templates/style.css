@@ -36,13 +36,50 @@ header {
 .boton {
     background-color: rgb(236, 0, 0);
     color: rgb(255, 255, 255);
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    font-size: 12px;
+    font-size: 14px;
+    font: bold;
     cursor: pointer;
-    
+    border: none;
+    cursor: pointer;
 }
+
+.boton:hover{
+    background-color: rgb(203, 60, 60);
+}
+
+.boton-container{
+    position: relative;
+    display: inline-block;
+}
+
+.contenido{
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.contenido a{
+    color: red;
+    padding: 20px 60px;
+    text-decoration: none;
+    display: block;
+}
+
+.contenido a:hover {
+    background-color: red;
+    color: white;
+}
+
+.show {
+    display: block;
+}
+
 footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -208,7 +245,8 @@ textarea.form-contac{
     bottom: 0;
     height: 100%;
     width: 0%;
-    background-color: #4caf50;      transition: width 0.5s ease;
+    background-color: #4caf50;
+    transition: width 0.5s ease;
 }
 .bateria-tapita {
     position: absolute;
