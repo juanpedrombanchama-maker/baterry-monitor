@@ -22,15 +22,21 @@ header {
     padding: 1rem 0;
     box-shadow: 0 2px, 5px rgba(0,0,0,0.1);
 }
-.logo.conexia {
+.container-header{
     display: flex;
-    align-items: center;
-    margin-bottom: 1rem;
+    width: 67%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+
 }
 .text h1 {
     font-size: 1.8rem;
     margin-bottom: 5px;
     text-align: center;
+}
+
+.logo-conexia {
+    width: 100%;
 }
 
 .boton {
@@ -40,7 +46,7 @@ header {
     height: 50px;
     border-radius: 50%;
     font-size: 14px;
-    font: bold;
+    font-weight: bold;
     cursor: pointer;
     border: none;
     cursor: pointer;
@@ -51,11 +57,16 @@ header {
 }
 
 .boton-container{
-    position: relative;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    margin-left: 15px;
+    margin-top: 50px;
     display: inline-block;
 }
 
 .contenido{
+    display: flex;
     display: none;
     position: absolute;
     background-color: white;
@@ -84,7 +95,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    margin-top: 185px;
+    margin-top: 210px;
     background-color: #333;
     color: white;
     border-top-left-radius: 20px;

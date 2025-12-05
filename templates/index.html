@@ -9,8 +9,17 @@
 </head>
 <body>
   <header>
-        <div class="container">
-            <div class="logo.conxia">
+        <div class="container-header">  
+            <div class="boton-container">
+                <button onclick="toggleMenu()" class="boton">Más</button>
+                <div id="miboton" class="contenido">
+                    <a href="Ayuda.html" class="nav-link">Ayuda</a>
+                    <a href="index.html" class="nav-link">Inicio</a>
+                    <a href="Sugerencias.html" class="nav-link">Sugerencias de Mejora</a>
+                </div> 
+            </div>
+            
+            <div class="logo-conexia">
                 <div class="logo">
                     <img src="static/conexxia-logo.png" alt="Ejemplo">
                 </div>
@@ -18,16 +27,7 @@
                     <h1>Monitor de Baterrias Conexia</h1>
                 </div>
             </div>
-                <div class="boton-container">
-                    <button onclick="toggleMenu()" class="boton">Más</button>
-                    <div id="miboton" class="contenido">
-                        <a href="Ayuda.html" class="nav-link">Ayuda</a>
-                        <a href="index.html" class="nav-link">Inicio</a>
-                        <a href="Sugerencias.html" class="nav-link">Sugerencias de Mejora</a>
-                    </div> 
-                </div>
         </div>
-        
     </header>
     <div class="bateria-container">
         <div id="contenedor-baterias"></div>
