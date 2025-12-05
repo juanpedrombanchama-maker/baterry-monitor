@@ -109,11 +109,15 @@ footer {
 }
 .redes img{
     max-width: 100%;
+    width: 41px;
+    height: 41px;
+    border-radius: 50%;
     display: inline-flex;
     object-fit: cover;
     display: flex;
 }
 .redes a {
+    display: flex;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -183,8 +187,29 @@ textarea.form-contac{
     cursor: pointer;
 }
 .bot:hover{
-    background-color: #1d6a01;
-}.barra ul{
+    background-color: #1d6a01;    
+}
+
+.barra {
+    width: 65%;
+    height: 20%;
+    border-radius: 15px;
+    border-bottom: 2px solid #d06060;
+    border-left: 2px solid #d06060;
+    border-right: 2px solid #d06060;
+    border-top: 2px solid #d06060;
+    justify-self: center;
+}
+
+.barra h3{
+    color: #d06060;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #d06060;
+    text-align: center;
+}
+
+.barra ul{
     display: flex;
     list-style: none;
     flex-wrap: wrap;
@@ -206,11 +231,13 @@ textarea.form-contac{
     border-bottom: 2px solid #d06060;
     text-align: center;
 }
+
 .container2 p{
     margin-bottom: 1.5rem;
     padding-bottom: 0.5rem;
     margin-left: 10px;
 }
+
 .container h2{
     color: #d06060;
     margin-bottom: 1.5rem;
