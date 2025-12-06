@@ -75,16 +75,36 @@ header {
     z-index: 1;
 }
 
-.contenido a{
+.nav-link{
     color: red;
     padding: 20px 60px;
     text-decoration: none;
     display: block;
 }
 
-.contenido a:hover {
+.nav-link:hover {
     background-color: red;
     color: white;
+}
+
+.fondo-conten {
+    width: 100%;
+    height: 150px;
+    background-color: black;
+    display: flex;
+    display: block;
+    text-align: center;
+}
+
+.fondo-conten a{
+    color: white;
+    font-size: 12px;
+    font-style: oblique;
+    text-decoration: none;
+}
+
+.fondo-conten a:hover{
+    color: blue;
 }
 
 .show {
