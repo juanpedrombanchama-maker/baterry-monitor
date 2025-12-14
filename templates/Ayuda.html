@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Monitor de Baterías</title>
     <link rel="icon" href="{{ url_for('static', filename='favicon_none.png') }}" type="image/x-icon">
-    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </head>
 <body>
     <header>
@@ -17,17 +18,17 @@
                         <div class="email">
                             <p>comercial.malabo@conexxiaeg.com</p>
                         </div>
-                        <img src="static/images (1).jpeg" alt="Fondo" class="imagen">
+                        <img src="{{ url_for('static', filename='images/images(1).jpeg') }}" alt="logo" class="imagen">
                     </div>
-                    <a href="Ayuda.html" class="nav-link">Ayuda</a>
-                    <a href="index.html" class="nav-link">Inicio</a>
-                    <a href="Sugerencias.html" class="nav-link">Sugerencias de Mejora</a>
+                    <a href="{{ url_for('Ayuda')}}">Ayuda</a>
+                    <a href="{{ url_for('index')}}">Inicio</a>
+                    <a href="{{ url_for('Sugerencias')}}">Sugerencias de Mejora</a>
                 </div> 
             </div>
             
             <div class="logo-conexia">
                 <div class="logo">
-                    <img src="static/conexxia-logo.png" alt="Ejemplo">
+                    <img src="{{ url_for('static', filename='images/conexxia-logo.png') }}" alt="logo">
                 </div>
                 <div class="text">
                     <h1>Monitor de Baterrias Conexia</h1>
@@ -64,11 +65,10 @@
             <p>&copy; 2025 Conexia. Todos los derechos reservados</p>
             </div>
         <div class="redes">
-            <a href="https://www.facebook.com/conexxiagq?__cft__[0]=AZWqzSOQiadoTHAifk1vwE_snN_VF-fAxbwf6V4LAkQmoAimgM08lbt9FEK-MYdi-sk0WJ4hQroGP34X59-b3lmdocLv8cGCuxo7FFE6SM_aNfJb7QwU_QGfIQMmkR4IuqZPNyJZCP4JIifnX5JpaclsZ_q5gkgk9F4SEhUDGyDLFLe-uE67_JdN5975FMnHuaQ&__tn__=-UC%2CP-R" aria-label="Facebook"><img src="static/Facebook-logo-.png" alt="Ejemplo"></a>
-            <a href="https://www.instagram.com/conexxia?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="Instagram"><img src="static/instagram-logo.png" alt="Ejemplo"></a>
-            <a href="https://www.youtube.com/@conexxia3661" aria-label="Youtube"><img src="static/youtube-logo.png" alt="Ejemplo"></a> 
+            <a href="https://www.facebook.com/conexxiagq?__cft__[0]=AZWqzSOQiadoTHAifk1vwE_snN_VF-fAxbwf6V4LAkQmoAimgM08lbt9FEK-MYdi-sk0WJ4hQroGP34X59-b3lmdocLv8cGCuxo7FFE6SM_aNfJb7QwU_QGfIQMmkR4IuqZPNyJZCP4JIifnX5JpaclsZ_q5gkgk9F4SEhUDGyDLFLe-uE67_JdN5975FMnHuaQ&__tn__=-UC%2CP-R" aria-label="Facebook"><img src="{{ url_for('static', filename='images/Facebook-logo.png') }}" alt="facebook"></a>
+            <a href="https://www.instagram.com/conexxia?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="Instagram"><img src="{{ url_for('static', filename='images/instagram-logo.png') }}" alt="instagram"></a>
+            <a href="https://www.youtube.com/@conexxia3661" aria-label="Youtube"><img src="{{ url_for('static', filename='images/youtube-logo.png') }}" alt="youtube"></a> 
             </div>
     </footer>
-    <script src="static/script.js"></script>
 </body>
 </html>
