@@ -75,14 +75,14 @@ header {
     z-index: 1;
 }
 
-.nav-link{
+.contenido a{
     color: red;
     padding: 20px 60px;
     text-decoration: none;
     display: block;
 }
 
-.nav-link:hover {
+.contenido a:hover {
     background-color: red;
     color: white;
 }

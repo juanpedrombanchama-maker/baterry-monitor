@@ -38,6 +38,14 @@ def nivel():
 def index():
     return render_template("index.html", baterias=estado_baterias)
 
+@app.route('/Ayuda')
+def Ayuda():
+    return render_template("Ayuda.html")
+
+@app.route('/Sugerncias')
+def Sugerencias():
+    return render_template("Sugerencias.html")
+
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port, debug=True)
