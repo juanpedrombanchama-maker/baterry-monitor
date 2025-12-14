@@ -290,6 +290,7 @@ textarea.form-contac{
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.386);
 }
 .bateria-container {
+    position: relative;
     justify-self: center;
     margin-top: 10%;
     display: grid;
@@ -299,6 +300,7 @@ textarea.form-contac{
     border-radius: 8px;
     background-color: #f0f0f0;
 }
+
 .bateria-nivel {
     position: absolute;
     bottom: 0;

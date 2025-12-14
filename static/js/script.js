@@ -67,7 +67,7 @@ function actualizar() {
         });
     }
 
-setInterval(actualizar, 1000);
+setInterval(actualizar, 500);
 function toggleMenu() {
     document.getElementById("miboton").classList.toggle("show");
   }
