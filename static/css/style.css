@@ -289,16 +289,6 @@ textarea.form-contac{
 .redes-2 img:hover{
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.386);
 }
-.bateria-container {
-    position: relative;
-    margin: 20px auto;
-    width: 100px;
-    height: 200px;
-    border: 5px solid #333;
-    border-radius: 8px;
-    background-color: #f0f0f0;
-}
-
 .bateria-nivel {
     position: absolute;
     bottom: 0;
