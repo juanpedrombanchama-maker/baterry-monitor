@@ -116,7 +116,7 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    margin-top: 210px;
+    margin-top: 62px;
     background-color: #333;
     color: white;
     border-top-left-radius: 20px;
@@ -299,6 +299,14 @@ textarea.form-contac{
     transition: height 0.5s ease;
 }
 
+.Baterrias{
+    position: relative;
+    display: flex;
+    width: 90%;
+    height: 500px;
+    justify-content: center;
+    justify-self: center;
+}
 .bateria-tapita {
     position: absolute;
     top: -12px;

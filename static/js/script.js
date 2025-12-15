@@ -1,12 +1,12 @@
 
 function actualizarFavicon(estado) {
-    let favicon = 'favicon_full.png';
+    let favicon = 'Favicon_full.png';
     if (estado === 'none') {
-        favicon = 'favicon_none.png';
+        favicon = 'Favicon_none.png';
     } else if (estado < 20) {
-        favicon = 'favicon_low.png';
+        favicon = 'Favicon_low.png';
     } else if (estado < 60) {
-        favicon = 'favicon_medium.png';
+        favicon = 'Favicon_medium.png';
     }
 
     const link = document.querySelector("link[rel~='icon']");
