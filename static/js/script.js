@@ -10,8 +10,8 @@ function actualizarFavicon(estado) {
     }
 
     const link = document.querySelector("link[rel~='icon']");
-      if (link) {
-        link.href = `/static/images/${favicon}?v=${Date.now()}`;
+    if (link) {
+        link.href = "{{ url_for('static', filename='images') }}/" + favicon;
     }
 }
 
