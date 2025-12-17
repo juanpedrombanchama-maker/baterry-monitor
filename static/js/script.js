@@ -11,7 +11,7 @@ function actualizarFavicon(estado) {
 
     const link = document.querySelector("link[rel~='icon']");
     if (link) {
-        link.href = "/static/images/" + favicon;
+        link.href = window.STATIC_URL + "/" + favicon;
     }
 }
 

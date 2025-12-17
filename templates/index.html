@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <title>Monitor de Baterías</title>
   <link rel="icon" href="{{ url_for('static', filename='images/favicon_none.png') }}">
+  <script>
+    window.STATIC_URL = "{{ url_for('static', filename='images') }}";
+  </script>
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   <script src="{{ url_for('static', filename='js/script.js') }}"></script>
   
