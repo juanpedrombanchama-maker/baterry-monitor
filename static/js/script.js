@@ -11,7 +11,7 @@ function actualizarFavicon(estado) {
 
     const link = document.querySelector("link[rel~='icon']");
       if (link) {
-        link.href = `/static/${favicon}?v=${Date.now()}`;
+        link.href = `/static/images/${favicon}?v=${Date.now()}`;
     }
 }
 
@@ -67,7 +67,7 @@ function actualizar() {
         });
     }
 
-setInterval(actualizar, 5000);
+setInterval(actualizar, 1000);
 function toggleMenu() {
     document.getElementById("miboton").classList.toggle("show");
   }
