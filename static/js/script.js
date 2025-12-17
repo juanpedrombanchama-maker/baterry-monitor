@@ -1,12 +1,12 @@
 
 function actualizarFavicon(estado) {
-    let favicon = 'Favicon_full.png';
+    let favicon = 'favicon_full.png';
     if (estado === 'none') {
-        favicon = 'Favicon_none.png';
+        favicon = 'favicon_none.png';
     } else if (estado < 20) {
-        favicon = 'Favicon_low.png';
+        favicon = 'favicon_low.png';
     } else if (estado < 60) {
-        favicon = 'Favicon_medium.png';
+        favicon = 'favicon_medium.png';
     }
 
     const link = document.querySelector("link[rel~='icon']");
@@ -63,11 +63,11 @@ function actualizar() {
         })
         .catch(err => {
           document.getElementById('contenedor-baterias').innerHTML = '<p>Error al obtener datos</p>';
-          actualizarFavicon(100);
+          actualizarFavicon("none");
         });
     }
 
-setInterval(actualizar, 1000);
+setInterval(actualizar, 5000);
 function toggleMenu() {
     document.getElementById("miboton").classList.toggle("show");
   }
