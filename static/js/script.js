@@ -2,19 +2,15 @@ function actualizarFavicon(estado) {
     let favicon = 'favicon_full.png';
     if (estado === 'none') {
         favicon = 'favicon_none.png';
-    } else if (typeof estado === 'number') {
-        if (estado < 20) {
-            favicon = 'favicon_low.png';
-        } else if (estado < 60) {
-            favicon = 'favicon_medium.png';
-        } else {
-            favicon = 'favicon_full.png';
-        }
+    } else if (estado < 20) {
+        favicon = 'favicon_low.png';
+    } else if (estado < 60) {
+        favicon = 'favicon_medium.png';
     }
 
     const link = document.querySelector("link[rel~='icon']");
-    if (link && window.STATIC_URL) {
-        link.href = window.STATIC_URL + favicon;
+      if (link) {
+        link.href = `/static/images/${favicon}?v=${Date.now()}`;
     }
 }
 
