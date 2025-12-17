@@ -11,7 +11,7 @@ function actualizarFavicon(estado) {
 
     const link = document.querySelector("link[rel~='icon']");
     if (link) {
-        link.href = "{{ url_for('static', filename='images') }}/" + favicon;
+        link.href = "/static/images/" + favicon;
     }
 }
 
@@ -47,7 +47,7 @@ function actualizar() {
 
             const bateriaHTML = `
               <div class="bateria-container" style="background-color: ${fondo};">
-                <div class="bateria-nivel" style="width: ${porcentaje}%; background-color: ${color};"></div>
+                <div class="bateria-nivel" style="height: ${porcentaje}%; background-color: ${color};"></div>
                 <div class="bateria-tapita"></div>
               </div>
               <div class="texto" style="color: ${porcentaje < 20 ? '#f44336' : '#333'};">
