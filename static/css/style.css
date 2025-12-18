@@ -152,6 +152,7 @@ footer {
     box-shadow: 0 3px 10px rgba(206, 203, 203, 0.692);
 }
 .mejora {
+    height: 97%;
     background-color: white;
     padding: 2rem;
     border-radius: 8px;
@@ -173,6 +174,7 @@ footer {
     font-size: 1rem;
 }
 .container-info {
+    height: 97%;
     background-color: white;
     padding: 2rem;
     border-radius: 8px;
@@ -239,7 +241,10 @@ textarea.form-contac{
     margin-left: 40px;
 }
 .container2{
+    width: 95%;
+    height: 470px;
     margin-top: 30px;
+    justify-self: center;
     background-color: white;
     padding: 2rem;
     border-radius: 8px;
