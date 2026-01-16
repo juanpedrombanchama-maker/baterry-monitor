@@ -305,7 +305,7 @@ textarea.form-contac{
 }
 
 .Baterrias{
-    position: static;
+    position: sticky;
     display: flex;
     width: 90%;
     height: 500px;
