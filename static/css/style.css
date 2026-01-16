@@ -313,7 +313,7 @@ textarea.form-contac{
     justify-self: center;
 }
 .bateria-tapita {
-    position: relative;
+    position: absolute;
     top: -12px;
     left: 35%;
     width: 30px;
