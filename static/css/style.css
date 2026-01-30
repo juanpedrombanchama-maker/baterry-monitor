@@ -294,18 +294,26 @@ textarea.form-contac{
 .redes-2 img:hover{
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.386);
 }
-.bateria-nivel {
-    position: relative;
-    bottom: 0;
-    left: 0;
-    width: 100%;               
-    background-color: #4caf50;
-    transition: height 0.5s ease;
+.bateria-container {
+    justify-self: center;
+    margin-top: 10%;
+    display: grid;
+    width: 100px;
+    height: 200px;
+    border: 5px solid #333;
+    border-radius: 8px;
+    background-color: #f0f0f0;
 }
-
-
+.bateria-nivel {
+    position: absolute;
+    bottom: 0;
+    height: 100%;
+    width: 0%;
+    background-color: #4caf50;
+    transition: width 0.5s ease;
+}
 .bateria-tapita {
-    position: relative;
+    position: absolute;
     top: -12px;
     left: 35%;
     width: 30px;
@@ -313,7 +321,6 @@ textarea.form-contac{
     background-color: #333;
     border-radius: 4px;
 }
-
 .texto {
     font-size: 16px;
     margin-top: 10px;
