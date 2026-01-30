@@ -305,7 +305,7 @@ textarea.form-contac{
     background-color: #f0f0f0;
 }
 .bateria-nivel {
-    position: absolute;
+    position: relative;
     bottom: 0;
     height: 100%;
     width: 0%;
