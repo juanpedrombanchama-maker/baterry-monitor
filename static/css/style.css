@@ -294,8 +294,17 @@ textarea.form-contac{
 .redes-2 img:hover{
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.386);
 }
+
+.bateria-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
 #contenedor-baterias {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     margin-top: 30px;

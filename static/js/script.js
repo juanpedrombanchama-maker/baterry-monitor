@@ -45,15 +45,18 @@ function actualizar() {
             const alerta = porcentaje < 20 ? '<p style="color:#f44336;">⚠️ Batería baja</p>' : '';
 
             const bateriaHTML = `
-              <div class="bateria-container" style="background-color: ${fondo};">
-                <div class="bateria-nivel" style="height: ${porcentaje}%; background-color: ${color};"></div>
-                <div class="bateria-tapita"></div>
-              </div>
-              <div class="texto" style="color: ${porcentaje < 20 ? '#f44336' : '#333'};">
-                <strong>${id}</strong>: ${porcentaje}% (${voltaje} V)
+              <div class="bateria-wrapper">
+                <div class="bateria-container" style="background-color: ${fondo};">
+                  <div class="bateria-nivel" style="height: ${porcentaje}%; background-color: ${color};"></div>
+                  <div class="bateria-tapita"></div>
+                </div>
+                <div class="texto" style="color: ${porcentaje < 20 ? '#f44336' : '#333'};">
+                  <strong>${id}</strong>: ${porcentaje}% (${voltaje} V)
                 ${alerta}
+                </div>
               </div>
             `;
+
 
             contenedor.innerHTML += bateriaHTML;
           }
