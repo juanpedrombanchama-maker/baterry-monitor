@@ -298,20 +298,12 @@ textarea.form-contac{
     position: relative;
     bottom: 0;
     left: 0;
-    width: 100%;        
-    height: 0%;        
+    width: 100%;               
     background-color: #4caf50;
     transition: height 0.5s ease;
 }
 
-.Baterrias{
-    position: relative;
-    display: flex;
-    width: 90%;
-    height: 500px;
-    justify-content: center;
-    justify-self: center;
-}
+
 .bateria-tapita {
     position: relative;
     top: -12px;
