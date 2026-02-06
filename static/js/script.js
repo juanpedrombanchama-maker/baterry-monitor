@@ -38,8 +38,9 @@ function actualizar() {
               porcentajeMinimo = porcentaje;
             }
 
-            const color = porcentaje > 75 ? '#4caf50' :
-                          porcentaje > 40 ? '#ffeb3b' :
+            const color = porcentaje > 90 ? '#4ff31d' :
+                          porcentaje > 75 ? '#adf719' :
+                          porcentaje > 50 ? '#ffeb3b' :
                           porcentaje > 30 ? 'rgb(250, 157, 35)' : '#f44336';
 
             const fondo = voltaje < 3.3 || voltaje > 4.2 ? '#ffe6e6' : '#f0f0f0';
