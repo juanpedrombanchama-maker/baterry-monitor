@@ -303,6 +303,8 @@ textarea.form-contac{
 
 
 #contenedor-baterias {
+    width: 100%;
+    height: 500px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -325,7 +327,7 @@ textarea.form-contac{
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100px;
+  width: 100%;
   height: 0%;
   background-color: #4caf50;
   transition: height 0.5s ease;
@@ -333,7 +335,7 @@ textarea.form-contac{
 
 .bateria-tapita {
   position: relative;
-  justify-self: center;
+  justify-content: center;
   top: -12px;
   left: 35%;
   width: 30px;
