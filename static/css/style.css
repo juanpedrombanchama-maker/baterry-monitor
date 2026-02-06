@@ -309,13 +309,13 @@ textarea.form-contac{
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 .bateria-container {
   position: relative;
   width: 100%;
-  height: 200px;
+  height: 250px;
   border: 4px solid #333;
   border-radius: 8px;
   margin: 20px auto;
