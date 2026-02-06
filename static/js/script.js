@@ -39,7 +39,8 @@ function actualizar() {
             }
 
             const color = porcentaje > 75 ? '#4caf50' :
-                          porcentaje > 40 ? '#ffeb3b' : '#f44336';
+                          porcentaje > 40 ? '#ffeb3b' :
+                          porcentaje > 30 ? 'rgb(250, 157, 35)' : '#f44336';
 
             const fondo = voltaje < 3.3 || voltaje > 4.2 ? '#ffe6e6' : '#f0f0f0';
             const alerta = porcentaje < 20 ? '<p style="color:#f44336;">⚠️ Batería baja</p>' : '';
